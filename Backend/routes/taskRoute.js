@@ -8,6 +8,6 @@ router.get('/allTasks',authenticateToken, getAllTasks);
 router.post('/addTask',authenticateToken, addTask);
 router.delete('/deleteTask/:id', deleteTask);
 router.get('/getTaskById/:id',authenticateToken, getTaskById);
-router.put('/updateTask/:id',authenticateToken, updateTask);
+router.put('/updateTask/:id', updateTask);
 
 export default router;

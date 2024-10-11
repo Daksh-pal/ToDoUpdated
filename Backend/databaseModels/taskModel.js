@@ -17,6 +17,7 @@ const taskSchema = new Schema({
     },
     state : {
         type : Boolean,
+        default : false,
         required : true
     }
 });

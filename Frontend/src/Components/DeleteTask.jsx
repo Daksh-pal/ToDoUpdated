@@ -8,7 +8,6 @@ const DeleteTask = ({ taskId }) => {
 
   const handleDelete = async (e) => {
     e.preventDefault();
-    console.log("Attempting to delete task with ID: ", taskId);
     try {
       const response = await axios.delete(`http://localhost:8080/api/task/deleteTask/${taskId}`, {
         headers: { Authorization: `Bearer ${localStorage.getItem('token')}` }
@@ -26,7 +25,7 @@ const DeleteTask = ({ taskId }) => {
     <div>
       <button
         onClick={handleDelete}
-        className="mt-2 text-red-500 hover:text-red-700 font-semibold transition duration-200"
+        className=" text-red-500 hover:text-red-700 font-semibold transition duration-200 bg-gray-900 p-3 rounded-md hover:bg-black"
       >
         Complete
       </button>
