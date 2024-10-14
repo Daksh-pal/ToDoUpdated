@@ -13,7 +13,6 @@ const AllTasks = () => {
   };
 
   const handleEdit = (taskId) => {
-    console.log(`/updateTask/${taskId}`, taskId);
     navigate(`/updateTask/${taskId}`);
   };
 
@@ -90,7 +89,6 @@ const AllTasks = () => {
                   {task.title}
                 </h3>
                 <div className="flex flex-row mt-5 ">
-                  {/* <UpdateTask taskId={task._id} onUpdate={handleEdit} /> */}
                   <button
                     onClick={() => handleEdit(task._id)}
                     className="mx-2 text-red-500 hover:text-red-700 font-semibold transition duration-200 bg-gray-900 p-3 rounded-md hover:bg-black"
